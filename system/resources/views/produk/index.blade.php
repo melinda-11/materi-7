@@ -10,7 +10,7 @@
 					Filter
 				</div>
 				<div class="card-body">
-					<form action="{{url('admin/produk/filter')}}" method="post">
+					<form action="{{url('produk/filter')}}" method="post">
 						@csrf
 						<div class="form-group">
 							<label for="" class="control-label">Nama</label>
@@ -43,7 +43,7 @@
 </div>
 				<div class="card-header">
 						Data Produk
-						<a href="{{url('admin/produk/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus">Tambah Data</i></a>
+						<a href="{{url('produk/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus">Tambah Data</i></a>
 					</div>
 					<div class="card-body">
 						<table class="table table-datatable">
@@ -60,9 +60,9 @@
 									<td>{{$loop->iteration}}</td>
 									<td>
 										<div class="btn-group">
-										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
-										<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-										@include ('template.utils.delete', ['url' => url ('admin/produk', $produk->id)])
+										<a href="{{url('produk', $produk->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+										<a href="{{url('produk', $produk->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+										@include ('template.utils.delete', ['url' => url ('produk', $produk->id)])
 										
 									</td>
 									<td>{{$produk->nama}}</td>

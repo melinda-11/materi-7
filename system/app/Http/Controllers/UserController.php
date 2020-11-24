@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\UserDetail;
 
 class UserController extends controller{
 	function index(){
+		//relationship existence
+		//user yang memiliki produk
+		//$data['list_user'] = user :: has ('produk')->get();
+		//user yang memiliki produk lebihh dari sana dengan 2
+		//$data['list_user'] = user::has('produk', '>=', '2')->get();
 		$data['list_user'] = User::all();
 		return view('user.index', $data);
 	}
@@ -18,6 +24,11 @@ class UserController extends controller{
 		$user->email = request('email');
 		$user->password = bcrypt(request('password'));
 		$user->save();
+
+		$userDetail = new UserDetail;
+		$userDetail->id_user = $user->id;
+		$userDetail->no_handphone = request('no_handphone');
+		$userDetail->save();
 
 		return redirect('user')->with('success','Data berhasil ditambahkan');
 	}

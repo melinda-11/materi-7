@@ -28,6 +28,9 @@
 						<label class="control-label" for="password">Password</label>
 						<input type="password" name="password" class="form-control">
 					</div>
+					<div class="form-group">
+						<label class="control-label" for="password">No Hp</label>
+						<input type="text" name="no_handphone" class="form-control"></div>
 					<button class="btn btn-dark float-right"><i class="fa fa-save"> simpan</i></button>
 					</form>
 					</div>

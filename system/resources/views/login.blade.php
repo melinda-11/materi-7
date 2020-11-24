@@ -29,10 +29,10 @@
               <form action="{{url('login')}}" method="post">
                 @csrf
                 <div class="form-group">
-                  <input type="text" name="" class="form-control" placeholder="Email">
+                  <input type="text" name="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <input type="text" name="" class="form-control" placeholder="Password">
+                  <input type="text" name="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="form-group custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customControlAutosizing">

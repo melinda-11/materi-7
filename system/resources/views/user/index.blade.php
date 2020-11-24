@@ -17,6 +17,7 @@
 								<th>Aksi</th>
 								<th>Username</th>
 								<th>Nama</th>
+								<th>Produk</th>
 								<th>Email</th>
 								
 							</thead>
@@ -33,6 +34,7 @@
 									</td>
 									<td>{{$user->username}}</td>
 									<td>{{$user->nama}}</td>
+									<td>{{$user->produk_count}}</td>
 									<td>{{$user->email}}</td>
 
 								</tr>

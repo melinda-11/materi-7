@@ -1,6 +1,7 @@
 <?php 
 namespace App\Http\Controllers;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class AuthController extends Controller{
 		function showLogin(){
@@ -11,7 +12,7 @@ class AuthController extends Controller{
 		if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
 			return redirect('beranda')->with('success', 'login berhasil');
 		}else{
-			return redirect('beranda')->with('danger', 'login gagal, silahkan cek email dan password anda'); 
+			return redirect('login')->with('danger', 'login gagal, silahkan cek email dan password anda'); 
 		}
 	}
 	function logout(){

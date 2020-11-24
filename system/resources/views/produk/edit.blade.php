@@ -8,7 +8,7 @@
 				<div class="card mt-4">
 					<div class="card-header">
 						Tambah Data Produk
-						<form action="{{url('admin/produk', $produk->id)}}" method="post">
+						<form action="{{url('produk', $produk->id)}}" method="post">
 							@csrf
 							@method('PUT')
 					</div>

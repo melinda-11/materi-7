@@ -12,8 +12,11 @@
 					<div class="card-body">
 						<h4>{{$user->nama}}</h4><hr>
 						<p>
-							 {{"@".$user->password}}
+							 {{"@".$user->username}}
 							Email : {{$user->email}}
+						</p>
+						<p>
+							No Handphone : {{$user->detail->no_handphone}}
 						</p>
 					
 					</div>
