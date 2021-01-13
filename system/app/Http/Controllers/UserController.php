@@ -23,6 +23,7 @@ class UserController extends controller{
 		$user->username= request('username');
 		$user->email = request('email');
 		$user->password = bcrypt(request('password'));
+		$user->jenis_kelamin = 1;
 		$user->save();
 
 		$userDetail = new UserDetail;

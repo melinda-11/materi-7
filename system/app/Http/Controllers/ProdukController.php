@@ -13,6 +13,7 @@ class ProdukController extends controller{
 		return view('produk.create');
 	}
 	function store(){
+
 		$produk= new Produk;
 		$produk->id_user = request()->id;
 		$produk->nama = request('nama');
@@ -21,6 +22,9 @@ class ProdukController extends controller{
 		$produk->deskripsi = request('deskripsi');
 		$produk->stok = request('stok');
 		$produk->save();
+
+		$produk->handleUploadFoto();
+
 
 		return redirect('produk')->with('success', 'Data berhasil ditambahkan');
 	}
@@ -34,9 +38,9 @@ class ProdukController extends controller{
 	}
 	function update(Produk $produk){
 		$produk->nama = request('nama');
+		
 		$produk->harga = request('harga');
 		$produk->berat = request('berat');
-		
 		$produk->deskripsi = request('deskripsi');
 		$produk->stok = request('stok');
 		$produk->save();

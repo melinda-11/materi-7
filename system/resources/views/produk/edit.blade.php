@@ -3,14 +3,35 @@
 @section('content')
 
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card mt-4">
-					<div class="card-header">
-						Tambah Data Produk
+		
+						<div class="card-header">
+						Edit Data Produk
+					</div>
+
+					
+					<div class="card-body">
+						<div class="row">
+						<div class="col-md-4">
+							<div class="row mt-5">
+			<div class="col-md-10">
+				<div class="card">
+					<div class="card-body">
+						<img src="{{url("system/public/$produk->foto")}}" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+						</div>
+						
+						<div class="row">
+						<div class="col-md-8">
+						</div>
+						
 						<form action="{{url('produk', $produk->id)}}" method="post">
+
 							@csrf
 							@method('PUT')
+
 					</div>
 					<div class="card-body">
 					<div class="form-group">
